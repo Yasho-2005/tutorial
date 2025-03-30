@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+        <div class="content">
+            <h3>Call by Value vs. Call by Reference in C</h3>
+            <p>When passing arguments to a function in C, there are two ways to do it:</p>
+
+<p><b>1. Call by Value</b> – A copy of the actual value is passed to the function. Any modifications inside the function do not affect the original value.</p>
+<p><b>2. Call by Reference</b> – The address of the actual value is passed, allowing modifications inside the function to reflect outside.</p>
+
+            <h5>Call By Value </h5>
+            <div class="syntax-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+void changeValue(int x) { 
+    x = 20; // Modifying the copy of the value
+}
+
+int main() {
+    int num = 10;
+    printf("Before function call: %d\n", num);
+    
+    changeValue(num); // Passing value
+    
+    printf("After function call: %d\n", num); // Original value remains unchanged
+    return 0;
+}</pre>
+            </div>
+
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+Before function call: 10
+After function call: 10</pre>
+            </div>
+<h4>Explanation: </h4>
+<p>The function changeValue() modifies <i>x</i>, but since it's a copy, <i>num</i> in main() remains unchanged.</p>
+
+    <h5>Call by Reference</h5>
+    <div class="syntax-box">
+        <pre>
+#include &lt;stdio.h&gt;
+
+void changeValue(int *x) { 
+    *x = 20; // Modifying the original value through pointer
+}
+
+int main() {
+    int num = 10;
+    printf("Before function call: %d\n", num);
+    
+    changeValue(&amp;num); // Passing address of num
+    
+    printf("After function call: %d\n", num); // Original value is changed
+    return 0;
+}</pre>
+    </div>
+
+
+    <h4>Output:</h4>
+    <div class="syntax-box"><pre>
+Before function call: 10
+After function call: 20</pre></div>
+
+    <h4>Explanation: </h4>
+    <p>Here, we pass the <b>memory address</b> of the variable, allowing the function to modify the original value.</p>
+
+    <h5>Example 2: Call by Reference</h5>
+    <p> A real-world example of Call by Reference is swapping two numbers in a banking system.
+
+Imagine you have two bank accounts, and you want to</b> swap their balances. Using Call by Reference, you can <b>directly modify</b> the original balances instead of returning new values.</p>
+    <div class="syntax-box">
+        <pre>
+#include &lt;stdio.h&gt;
+
+// Function to swap two balances using call by reference
+void swapBalances(float *acc1, float *acc2) {
+    float temp = *acc1;
+    *acc1 = *acc2;
+    *acc2 = temp;
+}
+
+int main() {
+    float balance1 = 5000.75, balance2 = 3000.25;
+
+    printf("Before Swapping:\n");
+    printf("Account 1 Balance: $%.2f\n", balance1);
+    printf("Account 2 Balance: $%.2f\n", balance2);
+
+    // Swapping balances
+    swapBalances(&amp;balance1, &amp;balance2);
+
+    printf("\nAfter Swapping:\n");
+    printf("Account 1 Balance: $%.2f\n", balance1);
+    printf("Account 2 Balance: $%.2f\n", balance2);
+
+    return 0;
+}</pre>
+    </div>
+    <h4>Output:</h4>
+    <div class="syntax-box">
+        <pre>
+Before Swapping:
+Account 1 Balance: $5000.75
+Account 2 Balance: $3000.25
+
+After Swapping:
+Account 1 Balance: $3000.25
+Account 2 Balance: $5000.75</pre>
+    </div>
+    <p>This is useful in <b>banking applications</b> where you may need to swap balances between accounts without creating new variables.</p>
+<p>A real-world scenario for Call by Reference could be: <br> <br>
+
+🔹 <b>ATM Cash Withdrawal</b>: When you withdraw money from an ATM, the function handling the withdrawal directly modifies the balance stored in your account. Instead of returning a new balance (like Call by Value), it updates the actual balance in the bank's database. <br>
+
+🔹 <b>Game Health System</b>: In video games, when a character takes damage, their health is stored in a variable. A function that processes damage could use Call by Reference to directly update the player's health instead of returning a new value. <br>
+
+🔹 <b>E-commerce Cart Update</b>: When you add or remove items from your shopping cart, the function updates the original cart data directly rather than creating a separate copy. <br> <br>
+
+These scenarios involve modifying the actual data rather than just working with copies, making <b>Call by Reference</b> useful.</p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>

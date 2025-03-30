@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+                
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+
+        <div class="content">
+            <h5>3D Array</h5>
+            <p>A <b>multidimensional array</b> in C is essentially an array of arrays. The most common type is a 2D array, but you can have more dimensions, like <b>3D arrays</b> or even higher.</p>
+
+            <h5>Example: </h5>
+            <p>Let’s say we are storing temperature data for a city over multiple weeks, where:</p>
+            <p>The <b>first dimension</b> represents the week. <br>
+                The <b>second dimension</b> represents the day of the week. <br>
+                The <b>third dimension</b> stores the temperature readings (morning, afternoon, evening).</p>
+
+            <div class="syntax-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // 3 weeks, 7 days per week, 3 temperature readings per day
+    int temperature[3][7][3] = {
+        { {30, 32, 28}, {31, 33, 29}, {32, 34, 30}, {33, 35, 31},
+         {34, 36, 32}, {35, 37, 33}, {36, 38, 34} }, //week 1
+         { {28, 30, 26},{29, 31, 27}, {30, 32, 28}, {31, 33, 29}, 
+         {32, 34, 30}, {33, 35, 31}, {34, 36, 32} },  //week 2
+        { {27, 29, 25}, {28, 30, 26}, {29, 31, 27}, {30, 32, 28}, 
+        {31, 33, 29}, {32, 34, 30}, {33, 35, 31} }  //week 3
+    };
+
+    // Display temperature readings for Week 1, Day 1
+    printf("Temperature readings for Week 1, Day 1:\n");
+    printf("Morning: %d°C, Afternoon: %d°C, Evening: %d°C\n",
+           temperature[0][0][0], temperature[0][0][1], temperature[0][0][2]);
+
+    return 0;
+}
+                </pre>
+            </div>
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+Temperature readings for Week 1, Day 1:
+Morning: 30°C, Afternoon: 32°C, Evening: 28°C
+
+                </pre>
+            </div>
+            <h4>Explanation: </h4>
+            <p>We define a 3D array with dimensions [3][7][3]: <br>
+                3 weeks<br>
+                7 days per week<br>
+                3 temperature readings per day (Morning, Afternoon, Evening)</p>
+
+                <h4>Week 1:</h4>
+                <table  style="text-align:center; margin-left: 40px;" border="1" width="70%">
+        <tr>
+            <th>Day</th>
+            <th>Temp 1</th>
+            <th>Temp 2</th>
+            <th>Temp 3</th>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>30</td>
+            <td>32</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>31</td>
+            <td>33</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>32</td>
+            <td>34</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>33</td>
+            <td>35</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>34</td>
+            <td>36</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>35</td>
+            <td>37</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>36</td>
+            <td>38</td>
+            <td>34</td>
+        </tr>
+    </table>
+    <h4>Week 2:</h4>
+    <table  style="text-align:center; margin-left: 40px;" border="1" width="70%">
+        <tr>
+            <th>Day</th>
+            <th>Temp 1</th>
+            <th>Temp 2</th>
+            <th>Temp 3</th>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>28</td>
+            <td>30</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>29</td>
+            <td>31</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>30</td>
+            <td>32</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>31</td>
+            <td>33</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>32</td>
+            <td>34</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>33</td>
+            <td>35</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>34</td>
+            <td>36</td>
+            <td>32</td>
+        </tr>
+    </table>
+    <h4>Week 3:</h4>
+    <table  style="text-align:center; margin-left: 40px; margin-bottom: 20px;" border="1" width="70%">
+        <tr>
+            <th>Day</th>
+            <th>Temp 1</th>
+            <th>Temp 2</th>
+            <th>Temp 3</th>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>27</td>
+            <td>29</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>28</td>
+            <td>30</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>29</td>
+            <td>31</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>30</td>
+            <td>32</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>31</td>
+            <td>33</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>32</td>
+            <td>34</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>33</td>
+            <td>35</td>
+            <td>31</td>
+        </tr>
+    </table>
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+
+
+
+</html>

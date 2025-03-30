@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+        <div class="content">
+            <h3>Switch Statement in C</h3>
+            <p>The <b>switch</b> statement in C is used for decision-making. It allows the program to execute a block of code when a specified case value is <b>true</b> and execute a different block when the condition is <b>false</b>.</p>
+            <p>The <b>Switch</b> statement is used for handling multiple conditions, similar to if-else if statements. </p>
+            <p>The difference in both is that <b>if-else if</b> can check multiple conditions, while <b>switch</b> checks one value against different cases. </p>
+            <h4>Syntax:</h4>
+            <div class="syntax-box"> switch(expression) { <br> &nbsp;&nbsp;&nbsp;&nbsp; case value1: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Code to execute if expression == value1 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br> &nbsp;&nbsp;&nbsp;&nbsp; case value2: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Code to execute if expression == value2 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br> &nbsp;&nbsp;&nbsp;&nbsp; default: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Code to execute if no cases match <br> } </div>
+
+            <h5>Example 2: Check Day of the Week</h5>
+<p>This program takes a number (1-7) as input and displays the corresponding day of the week using a switch statement.</p>
+
+<div class="syntax-box">
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int day;
+
+    printf("Enter a number (1-7) for the day of the week: ");
+    scanf("%d", &day);
+
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        case 4:
+            printf("Thursday\n");
+            break;
+        case 5:
+            printf("Friday\n");
+            break;
+        case 6:
+            printf("Saturday\n");
+            break;
+        case 7:
+            printf("Sunday\n");
+            break;
+        default:
+            printf("Invalid input! Please enter a number between 1 and 7.\n");
+    }
+
+    return 0;
+}</pre>
+</div>
+
+<h4>Output:</h4>
+<div class="syntax-box">
+    <pre>
+Enter a number (1-7) for the day of the week: 3
+Wednesday</pre>
+</div>
+
+
+            <h4>Output:</h4>
+            <div class="syntax-box">
+            Enter a number (1-7): 3 <br>
+                Wednesday
+            </div>
+            <div class="syntax-box">
+            Enter a number (1-7): 9 <br>
+            Invalid input! Please enter a number from 1 to 7.
+            </div>
+
+            <h5>Example 2: Menu Selection Using Switch</h5>
+<p>This program displays a menu of food items and asks the user to enter a choice. Based on the selection, the program prints the corresponding item using a switch statement.</p>
+
+<div class="syntax-box">
+    #include &lt;stdio.h&gt; <br>
+    int main() { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; int choice; <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("Menu:\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("1. Pizza\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("2. Burger\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("3. Pasta\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("Enter your choice (1-3): "); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; scanf("%d", &choice); <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; switch (choice) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 1: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("You selected Pizza.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 2: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("You selected Burger.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 3: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("You selected Pasta.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Invalid choice! Please select between 1-3.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; } <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; return 0; <br>
+    }
+</div>
+
+<h4>Output:</h4>
+<div class="syntax-box">
+    Menu:<br>
+    1. Pizza<br>
+    2. Burger<br>
+    3. Pasta<br>
+    Enter your choice (1-3): 2<br>
+    You selected Burger.
+</div>
+
+<h5>Example 3: Simple Calculator Using Switch</h5>
+<p>This program takes two numbers and an operator as input and performs the corresponding arithmetic operation using a switch statement.</p>
+
+<div class="syntax-box">
+    #include &lt;stdio.h&gt; <br>
+    int main() { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; double num1, num2, result; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; char op; <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("Enter first number: "); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; scanf("%lf", &num1); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("Enter an operator (+, -, *, /): "); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; scanf(" %c", &op); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; printf("Enter second number: "); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; scanf("%lf", &num2); <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; switch (op) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case '+': <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = num1 + num2; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Result: %.2lf\n", result); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case '-': <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = num1 - num2; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Result: %.2lf\n", result); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case '*': <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = num1 * num2; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Result: %.2lf\n", result); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case '/': <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (num2 != 0) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = num1 / num2; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Result: %.2lf\n", result); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Error! Division by zero is not allowed.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Invalid operator! Please use +, -, *, or /.\n"); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; } <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; return 0; <br>
+    }
+</div>
+
+<h4>Output:</h4>
+<div class="syntax-box">
+    Enter first number: 10<br>
+    Enter an operator (+, -, *, /): *<br>
+    Enter second number: 5<br>
+    Result: 50.00
+</div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>

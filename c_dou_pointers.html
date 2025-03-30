@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+                
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+
+        <div class="content">
+            <h3>Double Pointers in C</h3>
+            <p>A <b>double pointer</b> (or pointer to a pointer) is a pointer that stores the address of another pointer. Instead of directly pointing to a variable, it first points to a pointer, which in turn points to the actual variable.</p>
+            <p>Imagine a <b>house address (memory location of a variable)</b> written on a <b>note (pointer)</b>, and someone is holding that note. Now, if another person writes the location of that note on a separate <b>register (double pointer)</b>, this is similar to how a double pointer works in C.</p>
+
+            <h5>Example 1: </h5>
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr = &amp;num;    // Pointer to num
+    int **dptr = &amp;ptr;  // Double pointer storing address of ptr
+
+    // Printing values and addresses
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &amp;num);
+    
+    printf("Value at ptr (num's value): %d\n", *ptr);
+    printf("Address of ptr: %p\n", &amp;ptr);
+    
+    printf("Value at dptr (ptr's value, which is num's address): %p\n", *dptr);
+    printf("Value at **dptr (num's value): %d\n", **dptr);
+
+    return 0;
+}
+</pre>
+
+            </div>
+
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+Value of num: 10
+Address of num: 0x7ffc8a1b32c4
+Value at ptr (num's value): 10
+Address of ptr: 0x7ffc8a1b32c8
+Value at dptr (ptr's value, which is num's address): 0x7ffc8a1b32c4
+Value at **dptr (num's value): 10</pre>
+            </div>
+            <h4>Explanation: </h4>
+            <p>The address increased by <b>4 bytes</b> because ptr is a pointer to an int, and in most systems, an int occupies <b>4 bytes</b> in memory (on a <b>32-bit or 64-bit system</b> where sizeof(int) = 4).</p>
+            <p><b>Breakdown of Address Changes:</b> <br><br>
+            Let's assume: <br>
+            num is stored at 0x7ffc8a1b32c4 <br> 
+            ptr is stored at 0x7ffc8a1b32c8</p>
+            <p><b>Why does ptr’s address come right after num?</b>
+        <br>
+    1. num is an integer and occupies <b>4 bytes</b>. <br>
+2. Since ptr is declared immediately after num, it gets stored <b>right after</b> the 4-byte space allocated for num. <br>
+3. Thus, the address of ptr is 0x7ffc8a1b32c8 (0x7ffc8a1b32c4 + 4).</p>
+
+<p><b>Will this always be 4 bytes?</b> <br> 
+Not necessarily. The address change depends on: <br>
+sizeof(int) → If an int is 2 bytes (older systems) or 8 bytes (some 64-bit systems), the gap will be different. <br> <b>Memory alignment</b> → The compiler may add extra space (padding) for efficiency. <br>
+<b>Variable placement</b> → If declared differently, variables may not be next to each other.
+</p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+                
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+
+        <div class="content">
+            <h3>For loop in C</h3>
+            <p>The <b>for loop</b> is used when the number of iterations is known beforehand. </p>
+            <h4>Flowchart:-</h4>
+            <img src="img/forloop.png" alt="" height="450px" width="450px">
+
+            <h4>Syntax:</h4>
+            <div class="syntax-box">
+            <pre>
+for(initialization; condition; incr/decr) {
+    // Code to be executed
+}
+</pre>
+
+            </div>
+
+            <h5>Example 1:</h5>
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+</pre>
+
+            </div>
+            <h4>Output:</h4>
+<div class="syntax-box">
+<pre>
+1
+2
+3
+4
+5
+</pre>
+
+</div>
+<h5>Example 2: Multiplication Table using for loop in C</h5>
+<div class="syntax-box">
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for(int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+</pre>
+
+</div>
+<h4>Output:</h4>
+<div class="syntax-box">
+<pre>
+Enter a number: 5
+
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+</pre></div>
+
+
+<h4>Difference</h4>
+<p>When we say, <b>"we know beforehand,"</b> it means we already know how many times a loop should run before the loop starts execution. This is where a <b>for loop</b> is most useful.</p>
+<p>When we <b>don't know beforehand</b> how many times the loop should run, we usually use a <b>while</b> or  <b>do-while loop</b>. This happens when the loop depends on user input or a condition that isn't known before execution.</p>
+
+<h5>Example: Keep taking user input until user enters 0</h5>
+<div class="syntax-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    
+    while(1) { 
+        // Infinite loop, will break when user enters 0
+        printf("Enter numbers (enter 0 to stop):\n");
+        scanf("%d", &num);
+        
+        if (num == 0) {
+            break; // Stop the loop if user enters 0
+        }
+
+        printf("You entered: %d\n", num);
+    }
+
+    printf("Loop stopped because you entered 0.\n");
+
+    return 0;
+}</pre>
+</div>
+<h4>Output:</h4>
+
+<div class="syntax-box">
+    <pre>
+Enter numbers (enter 0 to stop):
+7
+You entered: 7
+Enter numbers (enter 0 to stop):
+5
+You entered: 5
+Enter numbers (enter 0 to stop):
+4
+You entered: 4
+Enter numbers (enter 0 to stop):
+3
+You entered: 3
+Enter numbers (enter 0 to stop):
+0
+Loop stopped because you entered 0.</pre>
+</div>
+<h4>Explanation:</h4>
+<p>Here, we don't know beforehand how many times the user will enter numbers. <br>
+The loop continues until the user enters 0. <br>
+We use a while(1) infinite loop with a break statement to stop it when needed</p>
+
+        </div> 
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

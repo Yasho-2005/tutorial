@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css ">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+                
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+
+        <div class="content">
+            <h3>Array in C</h3>
+            <p><b>Array</b> in C is a <b>collection of elements</b> of the same data type stored in contiguous <b>memory locations</b>. It is used to store multiple values under a single variable name, making data management more efficient.</p>
+
+            <h4>Syntax:</h4>
+            <div class="syntax-box">
+            data_type array_name[size];
+            </div>
+
+            <h5>Example 1: storing and accessing array in for loop.</h5>
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Declare and initialize a 1D array
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // Display array elements using a loop
+    printf("Array elements are: \n");
+    for(int i = 0; i < 5; i++) {
+        printf("%d \n", numbers[i]);
+    }
+
+    return 0;
+}
+</pre>
+</div>
+
+<h4>Output:</h4>
+<div class="syntax-box">
+<pre>
+Array elements are:
+10
+20
+30
+40
+50
+</pre>
+</div>
+
+            <h5>Example 2: Real World Example 1</h5>
+            <p>Imagine a situation where we need to store the marks of 5 students and calculate their average score.</p>
+
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Declare and initialize an array to store student marks
+    int marks[5];
+    int sum = 0;
+    float average;
+
+    // Input marks from the user
+    printf("Enter marks for 5 students:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("Student %d: ", i + 1);
+        scanf("%d", &marks[i]);  // Store input in the array
+        sum += marks[i];  // Add marks to sum
+    }
+
+    // Calculate average marks
+    average = sum / 5.0;
+
+    // Display the results
+    printf("\nStudent Marks: ");
+    for(int i = 0; i < 5; i++) {
+        printf("%d ", marks[i]);
+    }
+
+    printf("\nAverage Marks: %.2f\n", average);
+
+    return 0;
+}
+</pre>
+
+            </div>
+
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+Enter marks for 5 students:
+Student 1: 85
+Student 2: 90
+Student 3: 78
+Student 4: 88
+Student 5: 92
+
+Student Marks: 85 90 78 88 92
+Average Marks: 86.60</pre>
+            </div>
+<h5>Example 3: Real World Example 2</h5>
+<p>Imagine we are developing an online store where we need to store the prices of 5 products and display them with their total cost.</p>
+
+<div class="syntax-box">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Declare an array to store product prices
+    float prices[5];
+    float total = 0;
+
+    // Input prices from the user
+    printf("Enter prices of 5 products:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("Product %d Price: ", i + 1);
+        scanf("%f", &prices[i]);  // Store input in the array
+        total += prices[i];  // Add to total cost
+    }
+
+    // Display the prices of the products
+    printf("\nProduct Prices:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("Product %d: %.2f\n", i + 1, prices[i]);
+    }
+
+    // Display total cost
+    printf("\nTotal Cost: %.2f\n", total);
+
+    return 0;
+}
+</pre>
+
+</div>
+<h4>Output</h4>
+<div class="syntax-box">
+    <pre>
+Enter prices of 5 products:
+Product 1 Price: 10.50
+Product 2 Price: 20.75
+Product 3 Price: 15.30
+Product 4 Price: 8.99
+Product 5 Price: 12.60
+
+Product Prices:
+Product 1: 10.50
+Product 2: 20.75
+Product 3: 15.30
+Product 4: 8.99
+Product 5: 12.60
+
+Total Cost: 68.14</pre>
+</div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleIcon = document.getElementById("dark-mode-toggle");
+            const body = document.body;
+        
+            if (!toggleIcon) {
+                console.error("Dark mode toggle icon not found!");
+                return;
+            }
+        
+            // Check localStorage for dark mode preference
+            if (localStorage.getItem("darkMode") === "enabled") {
+                body.classList.add("dark-mode");
+                toggleIcon.innerHTML = "☀️"; // Change to Sun for Light Mode
+            }
+        
+            // Toggle Dark Mode on Click
+            toggleIcon.addEventListener("click", function() {
+                if (body.classList.contains("dark-mode")) {
+                    body.classList.remove("dark-mode");
+                    localStorage.setItem("darkMode", "disabled");
+                    toggleIcon.innerHTML = "🌙"; // Moon for Dark Mode
+                } else {
+                    body.classList.add("dark-mode");
+                    localStorage.setItem("darkMode", "enabled");
+                    toggleIcon.innerHTML = "☀️"; // Sun for Light Mode
+                }
+            });
+        });
+        </script> -->
+        <script src="script.js"></script>
+
+</body>
+
+
+
+</html>

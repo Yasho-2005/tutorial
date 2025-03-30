@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+                
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+
+        <div class="content">
+            <h3>2D Array in C</h3>
+            <p>A <b>2D array</b> is an array of arrays, meaning it stores data in a <b>row-column format</b> like a table or matrix. Each element in the array is accessed using two indices:</p>
+            <p>First index → Row number <br>
+            Second index → Column number</p>
+
+            <h4>Syntax:</h4>
+            <div class="syntax-box">
+            data_type array_name[rows][columns];
+            </div>
+
+            <h5>Example 1: Accessing stored values.</h5>
+            <div class="syntax-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int matrix[3][3]= {
+        {12,24,55},
+        {3,7,45},
+        {76,89,23}
+    };
+    int i, j;
+
+    // Displaying the matrix
+    printf("\nThe matrix is:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}</pre>
+            </div>
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+The matrix is:
+
+12	24	55	
+3	7	45	
+76	89	23</pre>
+            </div>
+            <h5>Example 2: storing and accessing.</h5>
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int matrix[3][3]; // 3 rows, 3 columns
+    int i, j;
+
+    // Taking input
+    printf("Enter elements for the matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Element [%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    // Displaying the matrix
+    printf("\nThe matrix is:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+</pre>
+
+</div>
+
+<h4>Output:</h4>
+<div class="syntax-box">
+<pre>
+Enter elements for the matrix:
+Element [0][0]: 12
+Element [0][1]: 24
+Element [0][2]: 55
+Element [1][0]: 3
+Element [1][1]: 7
+Element [1][2]: 45
+Element [2][0]: 76
+Element [2][1]: 89
+Element [2][2]: 23
+
+The matrix is:
+12	24	55	
+3	7	45	
+76	89	23	
+</pre>
+</div>
+<h5>Example 3: Printing stars in Matrix</h5>
+<div class="syntax-box">
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+   char stars[3][3];
+    int i, j;
+    
+    // Displaying the matrix
+    printf("\nThe matrix is:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("*\t", stars[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}</pre>
+</div>
+<h4>Output: </h4>
+<div class="syntax-box">
+    <pre>
+The matrix is:
+*	*	*	
+*	*	*	
+*	*	*</pre>
+</div>
+
+            <h5>Example 4: Real World Example </h5>
+            <p>A 2D array can be used to represent seats in a theater where rows and columns represent seats. Users can choose a seat, and we mark it as booked.</p>
+
+            <div class="syntax-box">
+            <pre>
+#include &lt;stdio.h&gt;
+
+#define ROWS 3
+#define COLS 4
+
+int main() {
+    int seats[ROWS][COLS] = {0}; // 0 means available, 1 means booked
+    int row, col;
+
+    // Display initial seating arrangement
+    printf("Available seats (0 = Available, 1 = Booked):\n");
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            printf("%d ", seats[i][j]);
+        }
+        printf("\n");
+    }
+
+    // User selects a seat
+    printf("\nEnter the row and column number to book (0-based index): ");
+    scanf("%d %d", &row, &col);
+
+    // Check if the seat is available
+    if (row >= 0 && row < ROWS && col >= 0 && col < COLS) {
+        if (seats[row][col] == 0) {
+            seats[row][col] = 1;
+            printf("Seat booked successfully!\n");
+        } else {
+            printf("Sorry, the seat is already booked!\n");
+        }
+    } else {
+        printf("Invalid seat selection!\n");
+    }
+
+    // Display updated seating arrangement
+    printf("\nUpdated seats:\n");
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            printf("%d ", seats[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+</pre>
+
+
+            </div>
+
+            <h4>Output:</h4>
+            <h4>Case 1: Booking an Available Seat</h4>
+            <div class="syntax-box">
+<pre>
+Available seats (0 = Available, 1 = Booked):
+0 0 0 0
+0 0 0 0
+0 0 0 0
+
+Enter the row and column number to book (0-based index): 1 2
+Seat booked successfully!
+
+Updated seats:
+0 0 0 0
+0 0 1 0
+0 0 0 0
+</pre>
+</div>
+
+<h4>Case 2: Trying to Book an Already Booked Seat</h4>
+<div class="syntax-box">
+<pre>
+Available seats (0 = Available, 1 = Booked):
+0 0 0 0
+0 0 1 0
+0 0 0 0
+
+Enter the row and column number to book (0-based index): 1 2
+Sorry, the seat is already booked!
+
+Updated seats:
+0 0 0 0
+0 0 1 0
+0 0 0 0
+</pre>
+</div>
+<p>❌ The system prevents double booking.</p>
+
+<h4>Case 3: Entering an Invalid Seat Number</h4>
+<div class="syntax-box">
+    <pre>
+Available seats (0 = Available, 1 = Booked):
+0 0 0 0
+0 0 1 0
+0 0 0 0
+
+Enter the row and column number to book (0-based index): 5 3
+Invalid seat selection!
+
+Updated seats:
+0 0 0 0
+0 0 1 0
+0 0 0 0</pre>
+</div>
+            <h4>Explanation:</h4>
+            <p>1. We initialize a 2D array where 0 represents available seats.</p>
+            <p>2. We display the seat arrangement so the user knows what’s available.</p>
+            <p>3. User inputs the row & column number of the seat they want.</p>
+            <p>4. If the seat is available (0), we change it to 1 (booked).</p>
+            <p>5. If already booked, we inform the user.</p>
+        </div>
+
+    </section>
+    
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>logo</h2>
+            <p><br><br></p>
+            <p>..Generated with AI</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>📍 Mumbai, India</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Tutorials</h3>
+            <ul>
+                <li><a href="">Java</a></li>
+                <li><a href="c.html">C Programming</a></li>
+                <li><a href="cpp.html">C++ Tutorial</a></li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Interview Questions</h3>
+            <ul>
+                <li>Infosys</li>
+                <li>TCS</li>
+                <li>Amazon</li>
+                <li>Capgemini</li>
+                <li>Microsoft</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+
+
+
+</html>

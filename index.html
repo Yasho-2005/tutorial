@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.php">Java</a>
+                <a href="about.php">SQL</a>
+                <a href="contact.php">PHP</a>
+                <a href="contact.php">.NET</a>
+                <a href="contact.php">C#</a>
+                <!-- <a href="login.php" class="btn">Sign in</a> -->
+            </nav>
+            
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleIcon = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+    
+        if (!toggleIcon) {
+            console.error("Dark mode toggle icon not found!");
+            return;
+        }
+    
+        // Check localStorage for dark mode preference
+        if (localStorage.getItem("darkMode") === "enabled") {
+            body.classList.add("dark-mode");
+            toggleIcon.innerHTML = "☀️"; // Change to Sun for Light Mode
+        }
+    
+        // Toggle Dark Mode on Click
+        toggleIcon.addEventListener("click", function() {
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("darkMode", "disabled");
+                toggleIcon.innerHTML = "🌙"; // Moon for Dark Mode
+            } else {
+                body.classList.add("dark-mode");
+                localStorage.setItem("darkMode", "enabled");
+                toggleIcon.innerHTML = "☀️"; // Sun for Light Mode
+            }
+        });
+    });
+    </script>
+
+    <section class="main">
+        <div class="container">
+            <a href="c.html">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/c-lang.png" alt="C">
+                        <p>C</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn C Programming</p>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="cpp.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/c-logo.png" alt="C++">
+                        <p>C++</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Master C++</p>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="java.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/java-logo.png" alt="Java">
+                        <p>Java</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Explore Java Development</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/mysql-logo-1.png" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn Database Management</p>
+                    </div>
+                </div>
+            </div></a>      
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/csharp.png" alt="MySQL">
+                        <p>C#</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn C#</p>
+                    </div>
+                </div>
+            </div></a>      
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/aspnet.png" alt="MySQL">
+                        <p>ASP.NET</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Master ASP.NET</p>
+                    </div>
+                </div>
+            </div></a> 
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/html5-logo.png" alt="MySQL">
+                        <p>HTML</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn Website Building</p>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/css3-logo.png" alt="MySQL">
+                        <p>CSS</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn Web Design</p>
+                    </div>
+                </div>
+            </div></a>    
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/javascript-logo.png" alt="MySQL">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Master JavaScript</p>
+                    </div>
+                </div>
+            </div></a> 
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/python.png" alt="MySQL">
+                        <p>Python</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn Python</p>
+                    </div>
+                </div>
+            </div></a> 
+
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/React.png" alt="MySQL">
+                        <p>React JS</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn React</p>
+                    </div>
+                </div>
+            </div></a> 
+                       
+            <a href="mysql.php">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/aspmvc.png" alt="MySQL">
+                        <p>ASP.NET MVC</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Learn MVC</p>
+                    </div>
+                </div>
+            </div></a>            
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.php">C Programming</a></li>
+                    <li><a href="cpp.php">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

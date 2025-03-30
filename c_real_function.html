@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="index.html" class="logo">logo</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="c.html">C</a>
+                <a href="cpp.html">C++</a>
+                <a href="order.html">Java</a>
+                <a href="about.html">SQL</a>
+                <a href="contact.html">PHP</a>
+                <a href="contact.html">.NET</a>
+                <a href="contact.html">C#</a>
+                <!-- <a href="login.html" class="btn">Sign in</a> -->
+            </nav>
+
+            <!-- Dark Mode Toggle (Moon & Sun Icons) -->
+            <span id="dark-mode-toggle" class="dark-mode-toggle">🌙</span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="sidebar">
+            <ul>
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">C Tutorial</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c.html">C Intro</a></li>
+                        <li><a href="c_features.html">Features of C</a></li>
+                        <li><a href="c_keywords.html">Keywords</a></li>
+                        <li><a href="c_keywords.html">Data Types</a></li>
+                        <li><a href="c_program.html">Basic Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="dropdown-toggle">Control Statements</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_if-else.html">If-else</a></li>
+                        <li><a href="c_switch.html">switch</a></li>
+                        <li><a href="c_loops.html">Loops</a></li>
+                        <li><a href="c_do-while.html">do-while loop</a></li>
+                        <li><a href="c_while.html">while loop</a></li>
+                        <li><a href="c_for.html">for loop</a></li>
+                        <li><a href="c_break.html">break</a></li>
+                        <li><a href="c_continue.html">continue</a></li>
+                        <li><a href="#">Nested loop</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Arrays</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_1d_array.html">1D Array</a></li>
+                        <li><a href="c_2d_array.html">2D Array</a></li>
+                        <li><a href="c_3d_array.html">3D Array</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Pointers</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_pointers.html">Pointers</a></li>
+                        <li><a href="c_dou_pointers.html">Double Pointers</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Funcitons</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_functions.html">Functions</a></li>
+                        <li><a href="c_user_function.html">User-defined functions</a></li>
+                        <li><a href="c_real_function.html">Real life Examples</a></li>
+                        <li><a href="c_value_ref.html">Call by Value/Reference</a></li>
+                        <li><a href="c_recur.html">Recursion</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">String</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_string.html">Strings</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">Structure</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_structure.html">Structure</a></li>
+                    </ul>
+                </li>
+
+                <li class="side-items dropdown">
+                    <h3 class="">File Handling</h3>
+                    <ul class="dropdown-menu">
+                        <li><a href="c_file.html">File Handling</a></li>
+                        <li><a href="c_memory.html">Memory</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="content">
+
+            <h5>Example 1: Simple program to detect arrow keys</h5>
+            <div class="syntax-box">
+                <pre>
+#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;  // Required for GetAsyncKeyState()
+
+int main() {
+    printf("Press arrow keys (ESC to quit):\n");
+
+    while (1) {
+        if (GetAsyncKeyState(VK_UP)) {
+            printf("Up Arrow Pressed\n");
+            Sleep(200); // Prevent too fast detection
+        }
+        if (GetAsyncKeyState(VK_DOWN)) {
+            printf("Down Arrow Pressed\n");
+            Sleep(200);
+        }
+        if (GetAsyncKeyState(VK_LEFT)) {
+            printf("Left Arrow Pressed\n");
+            Sleep(200);
+        }
+        if (GetAsyncKeyState(VK_RIGHT)) {
+            printf("Right Arrow Pressed\n");
+            Sleep(200);
+        }
+        if (GetAsyncKeyState(VK_ESCAPE)) {
+            printf("Exiting...\n");
+            break;
+        }
+    }
+
+    return 0;
+}</pre>
+            </div>
+
+            <h4>Output:</h4>
+            <div class="syntax-box">
+                <pre>
+Press arrow keys (ESC to quit):
+Up Arrow Pressed
+Up Arrow Pressed
+Down Arrow Pressed
+Down Arrow Pressed
+Down Arrow Pressed
+Right Arrow Pressed
+Right Arrow Pressed
+Right Arrow Pressed
+Left Arrow Pressed
+Left Arrow Pressed
+Left Arrow Pressed
+Left Arrow Pressed
+Exiting...</pre>
+            </div>
+
+    <h5>Example 2: Simple program to move character with arrow keys</h5>
+    <div class="syntax-box">
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;  // For _getch()
+#include &lt;windows.h&gt; // For system("cls")
+
+int main() {
+    int x = 10, y = 10; // Initial position
+
+    while (1) {
+        system("cls"); // Clears screen
+        for (int i = 0; i < y; i++) printf("\n"); // Move down
+        for (int i = 0; i < x; i++) printf(" ");  // Move right
+        printf("@");  // Character to move
+
+        char ch = _getch(); // Get key input
+
+        if (ch == 27) break; // Exit if 'Esc' is pressed
+        else if (ch == -32) { // Arrow keys start with -32
+            ch = _getch(); // Get actual arrow key
+            if (ch == 72 && y > 0) y--; // Up Arrow
+            if (ch == 80 && y < 20) y++; // Down Arrow
+            if (ch == 75 && x > 0) x--; // Left Arrow
+            if (ch == 77 && x < 40) x++; // Right Arrow
+        }
+    }
+
+    return 0;
+}</pre>
+    </div>
+
+    <h5>Example 3: ATM works with keys</h5>
+    <div class="syntax-box">
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;  // For getch()
+
+float balance = 1000.0; // Initial balance
+
+void withdrawMoney() {
+    float amount;
+    printf("\nEnter amount to withdraw: ");
+    scanf("%f", &amount);
+    if (amount > balance) {
+        printf("Insufficient funds!\n");
+    } else {
+        balance -= amount;
+        printf("Withdrawal successful! New balance: %.2f\n", balance);
+    }
+}
+
+void depositMoney() {
+    float amount;
+    printf("\nEnter amount to deposit: ");
+    scanf("%f", &amount);
+    balance += amount;
+    printf("Deposit successful! New balance: %.2f\n", balance);
+}
+
+void checkBalance() {
+    printf("\nYour current balance is: %.2f\n", balance);
+}
+
+int main() {
+    char choice;
+
+    while (1) { // Infinite loop to keep showing options
+        printf("\nSimple ATM System\n");
+        printf("Press W to Withdraw\n");
+        printf("Press D to Deposit\n");
+        printf("Press B to Check Balance\n");
+        printf("Press Q to Quit\n");
+
+        choice = getch(); // Get user input instantly
+
+        if (choice == 'W' || choice == 'w') {
+            withdrawMoney();
+        } else if (choice == 'D' || choice == 'd') {
+            depositMoney();
+        } else if (choice == 'B' || choice == 'b') {
+            checkBalance();
+        } else if (choice == 'Q' || choice == 'q') {
+            printf("\nExiting... Thank you!\n");
+            break; // Exit the loop when Q is pressed
+        }
+    }
+    return 0;
+}</pre>
+    </div>
+    <h4>Output:</h4>
+    <div class="syntax-box">
+        <pre>
+Simple ATM System
+Press W to Withdraw
+Press D to Deposit
+Press B to Check Balance
+Press Q to Quit
+
+Enter amount to deposit: 12000
+Deposit successful! New balance: 13000.00
+
+Simple ATM System
+Press W to Withdraw
+Press D to Deposit
+Press B to Check Balance
+Press Q to Quit
+
+Enter amount to deposit: 13000
+Deposit successful! New balance: 26000.00
+
+Simple ATM System
+Press W to Withdraw
+Press D to Deposit
+Press B to Check Balance
+Press Q to Quit
+
+Your current balance is: 26000.00
+
+Simple ATM System
+Press W to Withdraw
+Press D to Deposit
+Press B to Check Balance
+Press Q to Quit
+
+Simple ATM System
+Press W to Withdraw
+Press D to Deposit
+Press B to Check Balance
+Press Q to Quit</pre>
+    </div>
+    <h5>Example 4. Simple Calculator</h5>
+
+    <div class="syntax-box">
+        <pre>
+#include &lt;stdio.h&gt;
+
+// Function prototypes
+float add(float a, float b);
+float subtract(float a, float b);
+float multiply(float a, float b);
+float divide(float a, float b);
+
+int main() {
+    int choice;
+    float num1, num2, result;
+
+    do {
+        // Display menu
+        printf("\nSimple Calculator\n");
+        printf("1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Multiplication\n");
+        printf("4. Division\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice >= 1 && choice <= 4) {
+            // Take input for numbers
+            printf("Enter two numbers: ");
+            scanf("%f %f", &num1, &num2);
+        }
+
+        // Perform the selected operation
+        switch (choice) {
+            case 1:
+                result = add(num1, num2);
+                printf("Result: %.2f\n", result);
+                break;
+            case 2:
+                result = subtract(num1, num2);
+                printf("Result: %.2f\n", result);
+                break;
+            case 3:
+                result = multiply(num1, num2);
+                printf("Result: %.2f\n", result);
+                break;
+            case 4:
+                if (num2 != 0) {
+                    result = divide(num1, num2);
+                    printf("Result: %.2f\n", result);
+                } else {
+                    printf("Error: Division by zero is not allowed!\n");
+                }
+                break;
+            case 5:
+                printf("Exiting calculator. Goodbye!\n");
+                break;
+            default:
+                printf("Invalid choice! Please enter a number between 1 and 5.\n");
+        }
+    } while (choice != 5); // Keep repeating until user selects exit
+
+    return 0;
+}
+
+// Function definitions
+float add(float a, float b) { return a + b; }
+float subtract(float a, float b) { return a - b; }
+float multiply(float a, float b) { return a * b; }
+float divide(float a, float b) { return a / b; }</pre>
+    </div>
+    <h4>Output:</h4>
+    <div class="syntax-box">
+        <pre>
+
+Simple Calculator
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 1
+Enter two numbers: 45 45
+Result: 90.00
+
+Simple Calculator
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 2
+Enter two numbers: 23 3
+Result: 20.00
+
+Simple Calculator
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice:</pre>
+    </div>
+
+   
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>logo</h2>
+                <p><br><br></p>
+                <p>..Generated with AI</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Mumbai, India</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tutorials</h3>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="c.html">C Programming</a></li>
+                    <li><a href="cpp.html">C++ Tutorial</a></li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Interview Questions</h3>
+                <ul>
+                    <li>Infosys</li>
+                    <li>TCS</li>
+                    <li>Amazon</li>
+                    <li>Capgemini</li>
+                    <li>Microsoft</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>
